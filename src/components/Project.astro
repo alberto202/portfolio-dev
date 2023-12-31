@@ -1,0 +1,51 @@
+---
+import Next from "./icons/NextJs.astro";
+import Tailwind from "./icons/Tailwind.astro";
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: Next,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-white text-[#73bcf6]",
+    icon: Tailwind,
+  },
+};
+
+const projects = [
+  {
+    title: "SVGL - A beautiful library with svg logo",
+    description:
+      "Created from scratch with react, svgl is a library that allows you to use svg logos in your projects. It is very easy to use and has a lot of customization options.",
+    link: "https://www.google.com",
+    github: "https://www.github.com",
+    image: "/projects/pj1.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+];
+---
+
+{
+  projects.map(({ title, image, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-sm ${tag.class} px-2 py-1 items-center`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img src={image} alt={title} class="rounded shadow-white/10" />
+    </article>
+  ))
+}

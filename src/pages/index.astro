@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Project from "../components/Project.astro";
+---
+
+<Layout
+  title="Portfolio de Alberto. Desarrollador y Programador web con 10 años de experiencia."
+  description="Contrata a Alberto, desarrollador web con 10 años de experiencia. Especializado en .net y enamorado de los patrones y arquitecturas distribuidas."
+>
+  <main>
+    <SectionContainer id="top" class="py-10 pb-10">
+      <h1
+        class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-5 mx-auto"
+      >
+        Hey! soy Alberto
+        <div class="flex justify-center items-center">
+          <Badge>Disponible para trabajar</Badge>
+        </div>
+      </h1>
+      <h2 class="text-xl opacity-90 text-balance">
+        +10 años de experiencia. Desarrollador web y experto en cloud Azure.
+        Especializado en .net y enamorado de los patrones y arquitecturas
+        distribuidas.
+      </h2>
+      <nav class="flex gap-2 py-4">
+        <SocialPill href="https://www.linkedin.com/in/alberto-moreno-mantas/">
+          <LinkedInIcon class="w-6 h-6" />LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/alberto202">
+          <GithubIcon class="w-6 h-6" />Github
+        </SocialPill>
+        <SocialPill href="https://github.com/alberto202">
+          <MailIcon class="w-6 h-6" />alberto20289@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-xl font-semibold text-white mb-6 flex gap-x-2 items-center"
+      >
+        <BriefcaseIcon class="size-6" />
+         Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-xl font-semibold text-white mb-6 flex gap-x-2 items-center"
+      >
+        <CodeIcon class="size-6" />
+         Proyectos
+      </h2>
+      <Project />
+    </SectionContainer>
+  </main>
+</Layout>
+
+<style></style>

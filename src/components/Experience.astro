@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const experiences = [
+  {
+    date: "Actualmente....",
+    title: "Software Engineer at Hiberus Tecnología",
+    description:
+      "Migración de aplicaciones a la nube AWS, modificación de arquitectura monolítica a microservicios y desarrollo de nuevas funcionalidades.",
+    link: "#",
+  },
+  {
+    date: "Abril 2022",
+    title: "Development & Cloud Consultant at Tokiota",
+    description:
+      "Desarrollo de nuevas aplicaciones serverless en Azure con Azure Functions y Azure search.",
+  },
+  {
+    date: "Septiembre 2019",
+    title: "Software Developer",
+    description:
+      "Desarrollo de aplicaciones web con React y .net core, con arquitectura DDD y desarrollo del CI/CD con Azure DevOps.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    experiences.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
